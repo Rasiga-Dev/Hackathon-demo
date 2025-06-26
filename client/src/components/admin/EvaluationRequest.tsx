@@ -22,7 +22,7 @@
 
 // //     const handleStatusChange = async (evaluatorId: string, status: 'approved' | 'rejected') => {
 // //     try {
-// //       const endpoint = `http://localhost:11129/api/evaluator/${status}/${evaluatorId}`;
+// //       const endpoint = `https://hackathon-backend-w6z7.onrender.com/api/evaluator/${status}/${evaluatorId}`;
 // //       await axios.put(endpoint, {}, {
 // //         headers: {
 // //           Authorization: `Bearer ${localStorage.getItem('adminToken')}`,
@@ -49,7 +49,7 @@
 // //  const fetchEvaluators = async () => {
 // //     const token = localStorage.getItem('adminToken');
 // //     try {
-// //       const response = await axios.get('http://localhost:11129/api/evaluator/pending', {
+// //       const response = await axios.get('https://hackathon-backend-w6z7.onrender.com/api/evaluator/pending', {
 // //         headers: { Authorization: `Bearer ${token}` },
 // //       });
 // //       setEvaluators(response.data);
@@ -165,7 +165,7 @@
 //   const fetchEvaluators = async (status: 'pending' | 'approved') => {
 //     const token = localStorage.getItem('adminToken');
 //     try {
-//       const response = await axios.get(`http://localhost:11129/api/evaluator/${status}`, {
+//       const response = await axios.get(`https://hackathon-backend-w6z7.onrender.com/api/evaluator/${status}`, {
 //         headers: { Authorization: `Bearer ${token}` },
 //       });
 //       setEvaluators(response.data);
@@ -179,7 +179,7 @@
 
 //   const handleStatusChange = async (evaluatorId: string, status: 'approved' | 'rejected') => {
 //     try {
-//       const endpoint = `http://localhost:11129/api/evaluator/${status}/${evaluatorId}`;
+//       const endpoint = `https://hackathon-backend-w6z7.onrender.com/api/evaluator/${status}/${evaluatorId}`;
 //       await axios.put(endpoint, {}, {
 //         headers: {
 //           Authorization: `Bearer ${localStorage.getItem('adminToken')}`,
@@ -215,7 +215,7 @@
 //  const handleSave = async (index) => {
 //     const evaluator = editableList[index];
 //     try {
-//       await axios.put(`http://localhost:11129/api/admin/evaluators/${evaluator._id}`, evaluator);
+//       await axios.put(`https://hackathon-backend-w6z7.onrender.com/api/admin/evaluators/${evaluator._id}`, evaluator);
 //       alert('Updated Successfully');
 //       setEditableIndex(null);
 //     } catch (err) {
@@ -228,7 +228,7 @@
 //   const handleDelete = async (index) => {
 //     const evaluator = editableList[index];
 //     try {
-//       await axios.put(`http://localhost:11129/api/admin/evaluators/${evaluator._id}`, { ...evaluator, status: 'rejected' });
+//       await axios.put(`https://hackathon-backend-w6z7.onrender.com/api/admin/evaluators/${evaluator._id}`, { ...evaluator, status: 'rejected' });
 //       const updated = [...editableList];
 //       updated[index].status = 'rejected';
 //       setEditableList(updated);
@@ -527,7 +527,7 @@ const EvaluationRequest = () => {
 
     const fetchEvaluatorsList = async () => {
         try {
-            const res = await axios.get('http://localhost:11129/api/admin/get-evaluators');
+            const res = await axios.get('https://hackathon-backend-w6z7.onrender.com/api/admin/get-evaluators');
             setEvaluatorList(res.data);
         } catch (err) {
             console.error('Error fetching evaluators:', err);
@@ -536,7 +536,7 @@ const EvaluationRequest = () => {
 
     const fetchEvaluators = async (status: 'pending' | 'get-evaluators') => {
         try {
-            const res = await axios.get(`http://localhost:11129/api/evaluator/${status}`, {
+            const res = await axios.get(`https://hackathon-backend-w6z7.onrender.com/api/evaluator/${status}`, {
                 headers: { Authorization: `Bearer ${token}` },
             });
             if (status === 'pending') {
@@ -563,7 +563,7 @@ const EvaluationRequest = () => {
 
     const handleStatusChange = async (id: string, status: 'approved' | 'rejected') => {
         try {
-            await axios.put(`http://localhost:11129/api/evaluator/${status}/${id}`, {}, {
+            await axios.put(`https://hackathon-backend-w6z7.onrender.com/api/evaluator/${status}/${id}`, {}, {
                 headers: { Authorization: `Bearer ${token}` },
             });
             toast.success(`Evaluator ${status}`);
@@ -589,7 +589,7 @@ const EvaluationRequest = () => {
     const handleSave = async (index: number) => {
         const evaluator = editableList[index];
         try {
-            await axios.put(`http://localhost:11129/api/admin/evaluators/${evaluator._id}`, evaluator, {
+            await axios.put(`https://hackathon-backend-w6z7.onrender.com/api/admin/evaluators/${evaluator._id}`, evaluator, {
                 headers: { Authorization: `Bearer ${token}` },
             });
             toast.success('Evaluator updated');
@@ -603,7 +603,7 @@ const EvaluationRequest = () => {
     const handleRejectApproved = async (index: number) => {
         const evaluator = editableList[index];
         try {
-            await axios.put(`http://localhost:11129/api/admin/evaluators/${evaluator._id}`, { ...evaluator, status: 'rejected' }, {
+            await axios.put(`https://hackathon-backend-w6z7.onrender.com/api/admin/evaluators/${evaluator._id}`, { ...evaluator, status: 'rejected' }, {
                 headers: { Authorization: `Bearer ${token}` },
             });
             toast.success('Evaluator marked as rejected');

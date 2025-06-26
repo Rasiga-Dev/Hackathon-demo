@@ -25,7 +25,7 @@ export default function EvaluatorLogin() {
   //     navigate('/average-projects');
   //   } else {
   //      try {
-  //     const response = await axios.post('http://localhost:11129/api/evaluator/login', credentials);
+  //     const response = await axios.post('https://hackathon-backend-w6z7.onrender.com/api/evaluator/login', credentials);
   //     const evaluator = response.data.evaluator;
 
   //     localStorage.setItem('evaluatorToken', response.data.token);
@@ -55,7 +55,7 @@ const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault();
 
   try {
-    const response = await axios.post('http://localhost:11129/api/evaluator/login', credentials);
+    const response = await axios.post('https://hackathon-backend-w6z7.onrender.com/api/evaluator/login', credentials);
     const evaluator = response.data.evaluator;
 
     localStorage.setItem('evaluatorToken', response.data.token);

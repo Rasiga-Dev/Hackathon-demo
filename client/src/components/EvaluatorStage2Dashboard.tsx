@@ -33,7 +33,7 @@
 // //             return;
 // //         }
 
-// //         axios.get('http://localhost:11129/api/evaluator/accepted-projects', {
+// //         axios.get('https://hackathon-backend-w6z7.onrender.com/api/evaluator/accepted-projects', {
 // //             headers: { 'Authorization': `Bearer ${token}` },
 // //         })
 // //             .then(res => {
@@ -78,7 +78,7 @@
 
 // //         try {
 // //             await axios.post(
-// //                 'http://localhost:11129/api/evaluator/submit-score',
+// //                 'https://hackathon-backend-w6z7.onrender.com/api/evaluator/submit-score',
 // //                 {
 // //                     projectId,
 // //                     score,
@@ -206,7 +206,7 @@
 //                     return;
 //                 }
 
-//                 const response = await axios.get('http://localhost:11129/api/evaluator/accepted-projects', {
+//                 const response = await axios.get('https://hackathon-backend-w6z7.onrender.com/api/evaluator/accepted-projects', {
 //                     headers: { 'Authorization': `Bearer ${token}` }
 //                 });
 
@@ -274,7 +274,7 @@
 //             }
 
 //             await axios.post(
-//                 'http://localhost:11129/api/evaluator/submit-score',
+//                 'https://hackathon-backend-w6z7.onrender.com/api/evaluator/submit-score',
 //                 {
 //                     projectId,
 //                     evaluatorName,
@@ -422,7 +422,7 @@ const EvaluatorStage2Dashboard: React.FC = () => {
                     return;
                 }
 
-                const response = await axios.get('http://localhost:11129/api/evaluator/accepted-projects', {
+                const response = await axios.get('https://hackathon-backend-w6z7.onrender.com/api/evaluator/accepted-projects', {
                     headers: { 'Authorization': `Bearer ${token}` }
                 });
 
@@ -485,7 +485,7 @@ const EvaluatorStage2Dashboard: React.FC = () => {
             }
 
             await axios.post(
-                'http://localhost:11129/api/evaluator/submit-score',
+                'https://hackathon-backend-w6z7.onrender.com/api/evaluator/submit-score',
                 {
                     projectId,
                     evaluatorName,

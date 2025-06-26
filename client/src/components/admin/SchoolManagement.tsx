@@ -22,7 +22,7 @@
 //         setError(null);
 
 //         try {
-//             let url = `http://localhost:11129/api/admin/schools?`;
+//             let url = `https://hackathon-backend-w6z7.onrender.com/api/admin/schools?`;
 
 //             const params = [];
 //             if (districtFilter) params.push(`district=${districtFilter}`);
@@ -170,7 +170,7 @@ const SchoolManagement = () => {
         setLoading(true);
         setError(null);
         try {
-            let url = `http://localhost:11129/api/admin/schools?`;
+            let url = `https://hackathon-backend-w6z7.onrender.com/api/admin/schools?`;
             const params = [];
             if (districtFilter) params.push(`district=${districtFilter}`);
             if (statusFilter) params.push(`status=${statusFilter}`);

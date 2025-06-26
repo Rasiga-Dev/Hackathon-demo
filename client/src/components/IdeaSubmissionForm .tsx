@@ -63,7 +63,7 @@
 // //         return;
 // //       }
 
-// //       const response = await axios.get('http://localhost:11129/api/school/get-registered-guide-teachers', {
+// //       const response = await axios.get('https://hackathon-backend-w6z7.onrender.com/api/school/get-registered-guide-teachers', {
 // //         headers: {
 // //           Authorization: `Bearer ${token}`,
 // //         },
@@ -141,7 +141,7 @@
 
 // //     // Remove manual content-type header!
 // //     const response = await axios.post(
-// //       'http://localhost:11129/api/schools/submit-idea',
+// //       'https://hackathon-backend-w6z7.onrender.com/api/schools/submit-idea',
 // //       formData
 // //     );
 
@@ -394,7 +394,7 @@
 //         return;
 //       }
 
-//       const response = await axios.get('http://localhost:11129/api/school/get-registered-guide-teachers', {
+//       const response = await axios.get('https://hackathon-backend-w6z7.onrender.com/api/school/get-registered-guide-teachers', {
 //         headers: {
 //           Authorization: `Bearer ${token}`,
 //         },
@@ -434,7 +434,7 @@
 //     const token = localStorage.getItem('schoolToken');
 
 //     await axios.post(
-//       'http://localhost:11129/api/schools/drafts',
+//       'https://hackathon-backend-w6z7.onrender.com/api/schools/drafts',
 //       {
 //         udiseCode,
 //         ...data
@@ -458,7 +458,7 @@
 //     const token = localStorage.getItem('schoolToken');
 
 //     const response = await axios.get(
-//       `http://localhost:11129/api/schools/drafts/${udiseCode}`,
+//       `https://hackathon-backend-w6z7.onrender.com/api/schools/drafts/${udiseCode}`,
 //       {
 //         headers: { Authorization: `Bearer ${token}` }
 //       }
@@ -631,7 +631,7 @@
 //       formData.append('paymentScreenshot', screenshot);
 
 //       const response = await axios.post(
-//         'http://localhost:11129/api/schools/submit-idea',
+//         'https://hackathon-backend-w6z7.onrender.com/api/schools/submit-idea',
 //         formData
 //       );
 
@@ -901,7 +901,7 @@ const IdeaSubmissionForm: React.FC = () => {
       const token = localStorage.getItem('schoolToken');
 
       await axios.post(
-        'http://localhost:11129/api/schools/drafts',
+        'https://hackathon-backend-w6z7.onrender.com/api/schools/drafts',
         {
           udiseCode,
           ...data
@@ -924,7 +924,7 @@ const IdeaSubmissionForm: React.FC = () => {
       const token = localStorage.getItem('schoolToken');
 
       const response = await axios.get(
-        `http://localhost:11129/api/schools/drafts/${udiseCode}`,
+        `https://hackathon-backend-w6z7.onrender.com/api/schools/drafts/${udiseCode}`,
         {
           headers: { Authorization: `Bearer ${token}` }
         }
@@ -954,7 +954,7 @@ const IdeaSubmissionForm: React.FC = () => {
         return;
       }
 
-      const response = await axios.get('http://localhost:11129/api/school/get-registered-guide-teachers', {
+      const response = await axios.get('https://hackathon-backend-w6z7.onrender.com/api/school/get-registered-guide-teachers', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -1023,7 +1023,7 @@ const IdeaSubmissionForm: React.FC = () => {
       formData.append('transactionId', transactionId);
 
       const response = await axios.post(
-        'http://localhost:11129/api/schools/submit-idea',
+        'https://hackathon-backend-w6z7.onrender.com/api/schools/submit-idea',
         formData,
         { headers: { 'Content-Type': 'multipart/form-data' } }
       );
@@ -1031,7 +1031,7 @@ const IdeaSubmissionForm: React.FC = () => {
       // Delete draft after successful submission
       const token = localStorage.getItem('schoolToken');
       await axios.delete(
-        `http://localhost:11129/api/schools/drafts/${parsedSchoolDetails.udiseCode}`,
+        `https://hackathon-backend-w6z7.onrender.com/api/schools/drafts/${parsedSchoolDetails.udiseCode}`,
         { headers: { Authorization: `Bearer ${token}` } }
       );
 

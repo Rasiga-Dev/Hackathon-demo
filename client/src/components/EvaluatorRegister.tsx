@@ -35,7 +35,7 @@
 //     setIsLoading(true);
 
 //     try {
-//       const response = await axios.post('http://localhost:11129/api/evaluator/register', {
+//       const response = await axios.post('https://hackathon-backend-w6z7.onrender.com/api/evaluator/register', {
 //         username: formData.username,
 //         email: formData.email,
 //         expertise: formData.expertise.filter(exp => exp.trim() !== '')
@@ -242,7 +242,7 @@ export default function EvaluatorRegister() {
     setIsLoading(true);
 
     try {
-      const response = await axios.post('http://localhost:11129/api/evaluator/register', {
+      const response = await axios.post('https://hackathon-backend-w6z7.onrender.com/api/evaluator/register', {
         username: formData.username,
         email: formData.email,
         phone: formData.phone,

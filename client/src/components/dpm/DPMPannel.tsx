@@ -11,7 +11,7 @@
 
 //         if (district) {
 //             axios
-//                 .get(`http://localhost:11129/api/dpm/by-district/${district}`)
+//                 .get(`https://hackathon-backend-w6z7.onrender.com/api/dpm/by-district/${district}`)
 //                 .then((res) => {
 //                     setEvaluators(res.data);
 //                     console.log(res.data,"evaluators");
@@ -45,7 +45,7 @@ const DPMPannel = () => {
   useEffect(() => {
     if (district) {
       axios
-        .get(`http://localhost:11129/api/dpm/by-district/${district}`)
+        .get(`https://hackathon-backend-w6z7.onrender.com/api/dpm/by-district/${district}`)
         .then((res) => {
           setEvaluators(res.data);
         });

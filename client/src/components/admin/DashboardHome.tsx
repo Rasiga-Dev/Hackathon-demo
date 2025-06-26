@@ -14,7 +14,7 @@
 // // //   const [loading, setLoading] = useState(true);
 
 // // //   useEffect(() => {
-// // //     fetch('http://localhost:11129/api/admin/dashboard-stats')
+// // //     fetch('https://hackathon-backend-w6z7.onrender.com/api/admin/dashboard-stats')
 // // //       .then((res) => res.json())
 // // //       .then((data) => {
 // // //         setStats(data);
@@ -77,7 +77,7 @@
 // //   const [loading, setLoading] = useState(true);
 
 // //   useEffect(() => {
-// //     fetch('http://localhost:11129/api/admin/dashboard-stats')
+// //     fetch('https://hackathon-backend-w6z7.onrender.com/api/admin/dashboard-stats')
 // //       .then(res => res.json())
 // //       .then(data => {
 // //         console.log('Fetched stats:', data); 
@@ -186,7 +186,7 @@
 //     setLoading(true);
 //     setError(null);
 
-//     fetch('http://localhost:11129/api/admin/dashboard-stats')
+//     fetch('https://hackathon-backend-w6z7.onrender.com/api/admin/dashboard-stats')
 //       .then(async (res) => {
 //         if (!res.ok) {
 //           // Try to parse error message from response
@@ -302,7 +302,7 @@ const DashboardHome = () => {
     setLoading(true);
     setError(null);
 
-    fetch('http://localhost:11129/api/admin/dashboard-stats')
+    fetch('https://hackathon-backend-w6z7.onrender.com/api/admin/dashboard-stats')
       .then(async (res) => {
         if (!res.ok) {
           const errorData = await res.json();

@@ -13,7 +13,7 @@
 
 // //     const fetchEvaluators = async () => {
 // //         try {
-// //             const res = await axios.get('http://localhost:11129/api/admin/evaluators');
+// //             const res = await axios.get('https://hackathon-backend-w6z7.onrender.com/api/admin/evaluators');
 // //             setEvaluators(res.data);
 // //         } catch (err) {
 // //             console.error('Error fetching evaluators:', err);
@@ -32,7 +32,7 @@
 // //     const handleViewClick = async (evaluator) => {
 // //         console.log(evaluatedProjectsDetails, "evaluatedProjectsDetails")
 // //         try {
-// //             const res = await axios.get(`http://localhost:11129/api/admin/${evaluator._id}/evaluated-projects`);
+// //             const res = await axios.get(`https://hackathon-backend-w6z7.onrender.com/api/admin/${evaluator._id}/evaluated-projects`);
 // //             // Flatten the data for easier rendering
 // //             const projects = [];
 // //             res.data.forEach(school => {
@@ -292,7 +292,7 @@
 
 //     const fetchEvaluators = async () => {
 //         try {
-//             const res = await axios.get('http://localhost:11129/api/admin/evaluators');
+//             const res = await axios.get('https://hackathon-backend-w6z7.onrender.com/api/admin/evaluators');
 //             setEvaluators(res.data);
 //         } catch (err) {
 //             console.error('Error fetching evaluators:', err);
@@ -311,7 +311,7 @@
 
 //     const handleViewClick = async (evaluator) => {
 //         try {
-//             const res = await axios.get(`http://localhost:11129/api/admin/${evaluator._id}/evaluated-projects`);
+//             const res = await axios.get(`https://hackathon-backend-w6z7.onrender.com/api/admin/${evaluator._id}/evaluated-projects`);
 
 //             const projects = [];
 //             res.data.forEach(school => {
@@ -621,7 +621,7 @@ const EvaluatorManagement = () => {
 
     const fetchEvaluators = async () => {
         try {
-            const res = await axios.get('http://localhost:11129/api/admin/evaluators');
+            const res = await axios.get('https://hackathon-backend-w6z7.onrender.com/api/admin/evaluators');
             setEvaluators(res.data);
         } catch (err) {
             console.error('Error fetching evaluators:', err);
@@ -661,7 +661,7 @@ const EvaluatorManagement = () => {
 
     const handleViewClick = async (evaluator) => {
         try {
-            const res = await axios.get(`http://localhost:11129/api/admin/${evaluator._id}/evaluated-projects`);
+            const res = await axios.get(`https://hackathon-backend-w6z7.onrender.com/api/admin/${evaluator._id}/evaluated-projects`);
    
 
             const projects = [];

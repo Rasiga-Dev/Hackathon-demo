@@ -2,7 +2,7 @@
 
 // const RazorpayButton = () => {
 //     const handlePayment = async () => {
-//         const response = await fetch("http://localhost:11129/api/payment/payment", {
+//         const response = await fetch("https://hackathon-backend-w6z7.onrender.com/api/payment/payment", {
 //             method: "POST",
 //             headers: {
 //                 "Content-Type": "application/json",
@@ -21,7 +21,7 @@
 //         //   order_id: data.id,
 //         //   handler: async function (response) {
 //         //     // Call backend to verify signature
-//         //     const verifyResponse = await fetch("http://localhost:11129/api/payment/verify", {
+//         //     const verifyResponse = await fetch("https://hackathon-backend-w6z7.onrender.com/api/payment/verify", {
 //         //       method: "POST",
 //         //       headers: {
 //         //         "Content-Type": "application/json",
@@ -114,7 +114,7 @@ const RazorpayButton = () => {
     return;
   }
 
-  const response = await fetch("http://localhost:11129/api/payment/payment", {
+  const response = await fetch("https://hackathon-backend-w6z7.onrender.com/api/payment/payment", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -133,7 +133,7 @@ const RazorpayButton = () => {
     order_id: data.id,
     handler: async function (response) {
       // ✅ Razorpay payment success
-      const verifyRes = await fetch("http://localhost:11129/api/payment/verify", {
+      const verifyRes = await fetch("https://hackathon-backend-w6z7.onrender.com/api/payment/verify", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -78,7 +78,7 @@
 // //   const handleSave = async (index) => {
 // //     const evaluator = editableList[index];
 // //     try {
-// //       await axios.put(`http://localhost:11129/api/admin/evaluators/${evaluator._id}`, evaluator);
+// //       await axios.put(`https://hackathon-backend-w6z7.onrender.com/api/admin/evaluators/${evaluator._id}`, evaluator);
 // //       alert('Updated Successfully');
 // //       setEditableIndex(null);
 // //     } catch (err) {
@@ -91,7 +91,7 @@
 // //   const handleDelete = async (index) => {
 // //     const evaluator = editableList[index];
 // //     try {
-// //       await axios.put(`http://localhost:11129/api/admin/evaluators/${evaluator._id}`, { ...evaluator, status: 'rejected' });
+// //       await axios.put(`https://hackathon-backend-w6z7.onrender.com/api/admin/evaluators/${evaluator._id}`, { ...evaluator, status: 'rejected' });
 // //       const updated = [...editableList];
 // //       updated[index].status = 'rejected';
 // //       setEditableList(updated);
@@ -111,7 +111,7 @@
 // //   const fetchPayments = async (district) => {
 // //     setIsLoading(true);
 // //     try {
-// //       const response = await fetch(`http://localhost:11129/api/admin/payments/${district}`);
+// //       const response = await fetch(`https://hackathon-backend-w6z7.onrender.com/api/admin/payments/${district}`);
 // //       const data = await response.json();
 // //       setPaymentData(data);
 
@@ -148,7 +148,7 @@
 // //   const fetchSchools = async () => {
 // //     try {
 // //       const token = localStorage.getItem('adminToken');
-// //       const res = await axios.get('http://localhost:11129/api/admin/get-registered-schools', {
+// //       const res = await axios.get('https://hackathon-backend-w6z7.onrender.com/api/admin/get-registered-schools', {
 // //         headers: { Authorization: `Bearer ${token}` },
 // //       });
 // //       setSchools(res.data);
@@ -161,7 +161,7 @@
 // //   const fetchEvaluators = async () => {
 // //     const token = localStorage.getItem('adminToken');
 // //     try {
-// //       const response = await axios.get('http://localhost:11129/api/evaluator/pending', {
+// //       const response = await axios.get('https://hackathon-backend-w6z7.onrender.com/api/evaluator/pending', {
 // //         headers: { Authorization: `Bearer ${token}` },
 // //       });
 // //       setEvaluators(response.data);
@@ -175,7 +175,7 @@
 
 // //   const fetchEvaluatorsList = async () => {
 // //     try {
-// //       const res = await axios.get('http://localhost:11129/api/admin/get-evaluators');
+// //       const res = await axios.get('https://hackathon-backend-w6z7.onrender.com/api/admin/get-evaluators');
 // //       setEvaluatorList(res.data);
 // //     } catch (err) {
 // //       console.error('Error fetching evaluators:', err);
@@ -184,7 +184,7 @@
 
 // //   const handleStatusChange = async (evaluatorId: string, status: 'approved' | 'rejected') => {
 // //     try {
-// //       const endpoint = `http://localhost:11129/api/evaluator/${status}/${evaluatorId}`;
+// //       const endpoint = `https://hackathon-backend-w6z7.onrender.com/api/evaluator/${status}/${evaluatorId}`;
 // //       await axios.put(endpoint, {}, {
 // //         headers: {
 // //           Authorization: `Bearer ${localStorage.getItem('adminToken')}`,

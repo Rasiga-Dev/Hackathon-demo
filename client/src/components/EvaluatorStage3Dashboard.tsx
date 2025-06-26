@@ -13,7 +13,7 @@
 
 // //     const fetchProjects = async () => {
 // //         try {
-// //             const response = await axios.get('http://localhost:11129/api/evaluator/getAcceptedEvaluatedProjects');
+// //             const response = await axios.get('https://hackathon-backend-w6z7.onrender.com/api/evaluator/getAcceptedEvaluatedProjects');
 // //             setProjects(response.data.data);
 // //         } catch (error) {
 // //             console.error('Error fetching projects:', error);
@@ -34,7 +34,7 @@
 
 // //     const handleSubmit = async (schoolId, projectId, status) => {
 // //         try {
-// //             const response = await axios.post('http://localhost:11129/api/evaluator/update-winner', {
+// //             const response = await axios.post('https://hackathon-backend-w6z7.onrender.com/api/evaluator/update-winner', {
 // //                 schoolId,
 // //                 projectId,
 // //                 status // 'accept' or 'reject'
@@ -184,7 +184,7 @@
 
 //     const fetchProjects = async () => {
 //         try {
-//             const response = await axios.get('http://localhost:11129/api/evaluator/getAcceptedEvaluatedProjects');
+//             const response = await axios.get('https://hackathon-backend-w6z7.onrender.com/api/evaluator/getAcceptedEvaluatedProjects');
 //             setProjects(response.data.data);
 //         } catch (error) {
 //             console.error('Error fetching projects:', error);
@@ -197,7 +197,7 @@
 
 //     const handleSubmit = async (schoolId, projectId, status) => {
 //         try {
-//             const response = await axios.post('http://localhost:11129/api/evaluator/update-winner', {
+//             const response = await axios.post('https://hackathon-backend-w6z7.onrender.com/api/evaluator/update-winner', {
 //                 schoolId,
 //                 projectId,
 //                 status // 'accept' or 'reject'
@@ -364,7 +364,7 @@ const EvaluatorStage3Dashboard = () => {
     const fetchProjects = async () => {
         try {
             setLoading(true); // start loader
-            const response = await axios.get('http://localhost:11129/api/evaluator/getAcceptedEvaluatedProjects');
+            const response = await axios.get('https://hackathon-backend-w6z7.onrender.com/api/evaluator/getAcceptedEvaluatedProjects');
             setProjects(response.data.data);
             setLoading(false); // stop loader
         } catch (error) {
@@ -380,7 +380,7 @@ const EvaluatorStage3Dashboard = () => {
     const handleSubmit = async (schoolId, projectId, status) => {
         try {
             setLoading(true);
-            const response = await axios.post('http://localhost:11129/api/evaluator/update-winner', {
+            const response = await axios.post('https://hackathon-backend-w6z7.onrender.com/api/evaluator/update-winner', {
                 schoolId,
                 projectId,
                 status

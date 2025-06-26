@@ -51,7 +51,7 @@
 // //         const username = localStorage.getItem('evaluatorName');
 
 // //         await axios.post(
-// //             `http://localhost:11129/api/evaluator/submit-score`,
+// //             `https://hackathon-backend-w6z7.onrender.com/api/evaluator/submit-score`,
 // //             {
 // //                 schoolId: project.schoolId,
 // //                 projectId: project.projectId,
@@ -262,7 +262,7 @@
 //             const token = localStorage.getItem('evaluatorToken');
 
 //             await axios.post(
-//                 `http://localhost:11129/api/evaluator/submit-score`,
+//                 `https://hackathon-backend-w6z7.onrender.com/api/evaluator/submit-score`,
 //                 {
 //                     schoolId: project.schoolId,
 //                     projectId: project.projectId,
@@ -485,7 +485,7 @@ export default function L2Level({ projects, username, refreshProjects, refreshLe
 
   //     const token = localStorage.getItem('evaluatorToken');
 
-  //     await axios.post(`http://localhost:11129/api/evaluator/submit-score`, {
+  //     await axios.post(`https://hackathon-backend-w6z7.onrender.com/api/evaluator/submit-score`, {
   //       schoolId: project.schoolId,
   //       projectId: project.projectId,
   //       evaluatorName: username,
@@ -531,7 +531,7 @@ export default function L2Level({ projects, username, refreshProjects, refreshLe
 
       const token = localStorage.getItem('evaluatorToken');
 
-      const response = await axios.post(`http://localhost:11129/api/evaluator/submit-score`, {
+      const response = await axios.post(`https://hackathon-backend-w6z7.onrender.com/api/evaluator/submit-score`, {
         schoolId: project.schoolId,
         projectId: project.projectId,
         evaluatorName: username,
@@ -583,7 +583,7 @@ export default function L2Level({ projects, username, refreshProjects, refreshLe
     setIsLoading(true);
     try {
       const token = localStorage.getItem('evaluatorToken');
-      const response = await axios.get('http://localhost:11129/api/evaluator/level-2-summary', {
+      const response = await axios.get('https://hackathon-backend-w6z7.onrender.com/api/evaluator/level-2-summary', {
         headers: { Authorization: `Bearer ${token}` },
       });
 

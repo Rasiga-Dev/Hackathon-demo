@@ -268,7 +268,7 @@
 
 //     try {
 //       const res = await axios.post(
-//         `http://localhost:11129/api/schools/upload-document/${projectId}`,
+//         `https://hackathon-backend-w6z7.onrender.com/api/schools/upload-document/${projectId}`,
 //         formData,
 //         {
 //           headers: {
@@ -326,7 +326,7 @@ const DocumentUploadForm = ({ projectId, onSuccess }) => {
     // Fetch project/submission details to check if document is already uploaded
     const fetchProject = async () => {
       try {
-        const res = await axios.get(`http://localhost:11129/api/schools/project/${projectId}`);
+        const res = await axios.get(`https://hackathon-backend-w6z7.onrender.com/api/schools/project/${projectId}`);
         const submission = res.data.submission;
 
         if (submission?.documentFile?.data) {
@@ -363,7 +363,7 @@ const DocumentUploadForm = ({ projectId, onSuccess }) => {
 
     try {
       const res = await axios.post(
-        `http://localhost:11129/api/schools/upload-document/${projectId}`,
+        `https://hackathon-backend-w6z7.onrender.com/api/schools/upload-document/${projectId}`,
         formData,
         { headers: { 'Content-Type': 'multipart/form-data' } }
       );

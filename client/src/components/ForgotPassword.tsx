@@ -16,7 +16,7 @@ export function ForgotPassword() {
     setError('');
 
     try {
-      const response = await axios.post('http://localhost:11129/api/auth/forgot-password', { email });
+      const response = await axios.post('https://hackathon-backend-w6z7.onrender.com/api/auth/forgot-password', { email });
       setSuccess(true);
       navigate('/verify-otp', { state: { email } });
     } catch (err: any) {

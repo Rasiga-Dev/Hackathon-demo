@@ -55,7 +55,7 @@ const RegisterGuideTeacher = () => {
   const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:11129/api/school/register-guide-teacher', {
+      const response = await axios.post('https://hackathon-backend-w6z7.onrender.com/api/school/register-guide-teacher', {
         teacherName,
         phoneNumber,
         email,

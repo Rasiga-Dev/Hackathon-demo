@@ -7,7 +7,7 @@
 // //   useEffect(() => {
 // //     const fetchGuideTeachers = async () => {
 // //       try {
-// //         const res = await axios.get('http://localhost:11129/api/admin/guide-teachers');
+// //         const res = await axios.get('https://hackathon-backend-w6z7.onrender.com/api/admin/guide-teachers');
 // //         setTeachers(res.data);
 // //       } catch (err) {
 // //         console.error('Error fetching guide teachers', err);
@@ -57,7 +57,7 @@
 //   useEffect(() => {
 //     const fetchGuideTeachers = async () => {
 //       try {
-//         const res = await axios.get('http://localhost:11129/api/admin/guide-teachers');
+//         const res = await axios.get('https://hackathon-backend-w6z7.onrender.com/api/admin/guide-teachers');
 //         setTeachers(res.data);
 //       } catch (err) {
 //         console.error('Error fetching guide teachers', err);
@@ -119,7 +119,7 @@ const GuideTeacherList = () => {
   useEffect(() => {
     const fetchGuideTeachers = async () => {
       try {
-        const res = await axios.get('http://localhost:11129/api/admin/guide-teachers');
+        const res = await axios.get('https://hackathon-backend-w6z7.onrender.com/api/admin/guide-teachers');
         setTeachers(res.data);
         setLoading(false);
       } catch (err) {

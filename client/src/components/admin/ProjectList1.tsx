@@ -8,7 +8,7 @@
 
 //   useEffect(() => {
 //     axios
-//       .get("http://localhost:11129/api/admin/all-projects")
+//       .get("https://hackathon-backend-w6z7.onrender.com/api/admin/all-projects")
 //       .then((res) => setProjects(res.data))
 //       .catch((err) => console.error(err));
 //   }, []);
@@ -92,13 +92,13 @@ const ProjectList1 = () => {
 
 //   useEffect(() => {
 //     axios
-//       .get("http://localhost:11129/api/admin/all-projects")
+//       .get("https://hackathon-backend-w6z7.onrender.com/api/admin/all-projects")
 //       .then((res) => setProjects(res.data))
 //       .catch((err) => console.error(err));
 //   }, []);
 useEffect(() => {
   axios
-    .get("http://localhost:11129/api/admin/all-projects")
+    .get("https://hackathon-backend-w6z7.onrender.com/api/admin/all-projects")
     .then((res) => {
       
       setProjects(res.data); // Set data to state

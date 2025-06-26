@@ -23,7 +23,7 @@ export function ResetPassword() {
     }
 
     try {
-      const response =await axios.post('http://localhost:11129/api/auth/reset-password', {
+      const response =await axios.post('https://hackathon-backend-w6z7.onrender.com/api/auth/reset-password', {
         email,
         password,
         token, // ✅ this comes from verify-otp response

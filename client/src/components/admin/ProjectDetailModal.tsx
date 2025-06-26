@@ -6,13 +6,13 @@
 
 // // //   useEffect(() => {
 // // //     axios
-// // //       .get(`http://localhost:11129/api/admin/project/${project.schoolId}/${project.index}`)
+// // //       .get(`https://hackathon-backend-w6z7.onrender.com/api/admin/project/${project.schoolId}/${project.index}`)
 // // //       .then((res) => setDetails(res.data))
 // // //       .catch((err) => console.error(err));
 // // //   }, [project]);
 // // useEffect(() => {
 // //   axios
-// //     .get(`http://localhost:11129/api/admin/project/${project.schoolId}/${project.index}`)
+// //     .get(`https://hackathon-backend-w6z7.onrender.com/api/admin/project/${project.schoolId}/${project.index}`)
 // //     .then((res) => {
 // //       console.log("Fetched Project Details:", res.data); // ✅ Log the response
 // //       setDetails(res.data); // Set data to state
@@ -101,7 +101,7 @@
 
 //     useEffect(() => {
 //         axios
-//             .get(`http://localhost:11129/api/admin/project/${project.schoolId}/${project.index}`)
+//             .get(`https://hackathon-backend-w6z7.onrender.com/api/admin/project/${project.schoolId}/${project.index}`)
 //             .then((res) => {
 //                 console.log("Fetched Project Details:", res.data);
 //                 setDetails(res.data);
@@ -201,7 +201,7 @@ const ProjectDetailModal = ({ project, onClose }) => {
 
     useEffect(() => {
         axios
-            .get(`http://localhost:11129/api/admin/project/${project.schoolId}/${project.index}`)
+            .get(`https://hackathon-backend-w6z7.onrender.com/api/admin/project/${project.schoolId}/${project.index}`)
             .then((res) => {
                
                 setDetails(res.data);
@@ -311,7 +311,7 @@ const ProjectDetailModal = ({ project, onClose }) => {
                         <p>
                             Uploaded File: {details.documents.filename}{" "}
                             <a
-                                href={`http://localhost:11129/api/documents/${details.documents.filename}`}
+                                href={`https://hackathon-backend-w6z7.onrender.com/api/documents/${details.documents.filename}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-blue-600 underline ml-2"

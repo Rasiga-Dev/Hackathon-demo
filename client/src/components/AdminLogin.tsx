@@ -18,7 +18,7 @@ export default function AdminLogin() {
     setError('');
   
     try {
-      const response = await axios.post('http://localhost:11129/api/admin/login', credentials);
+      const response = await axios.post('https://hackathon-backend-w6z7.onrender.com/api/admin/login', credentials);
       const token = response.data.token;
       
       localStorage.setItem('adminToken', token);

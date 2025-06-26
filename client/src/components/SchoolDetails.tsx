@@ -6,7 +6,7 @@ const SchoolDetails = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get('http://localhost:11129/api/schools')
+    axios.get('https://hackathon-backend-w6z7.onrender.com/api/schools')
       .then((response) => {
         setSchools(response.data); // Set the schools data
         setLoading(false); // Set loading to false once data is fetched

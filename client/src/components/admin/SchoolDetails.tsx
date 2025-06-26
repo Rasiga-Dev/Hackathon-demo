@@ -10,7 +10,7 @@
 //     useEffect(() => {
 //         const fetchSchoolDetails = async () => {
 //             try {
-//                 const res = await axios.get(`http://localhost:11129/api/admin/school/${id}`);
+//                 const res = await axios.get(`https://hackathon-backend-w6z7.onrender.com/api/admin/school/${id}`);
 //                 setSchool(res.data);
 //                 console.log("School details fetched:", res.data);
 //             } catch (err) {
@@ -109,16 +109,16 @@
 //   useEffect(() => {
 //     const fetchData = async () => {
 //       try {
-//         const schoolRes = await axios.get(`http://localhost:11129/api/schools/${id}`);
+//         const schoolRes = await axios.get(`https://hackathon-backend-w6z7.onrender.com/api/schools/${id}`);
 //         setSchool(schoolRes.data);
 
-//         const projectRes = await axios.get(`http://localhost:11129/api/schools/${id}/projects`);
+//         const projectRes = await axios.get(`https://hackathon-backend-w6z7.onrender.com/api/schools/${id}/projects`);
 //         setProjects(projectRes.data);
 
-//         const teachersRes = await axios.get(`http://localhost:11129/api/schools/${id}/guide-teachers`);
+//         const teachersRes = await axios.get(`https://hackathon-backend-w6z7.onrender.com/api/schools/${id}/guide-teachers`);
 //         setGuideTeachersCount(teachersRes.data.length);
 
-//         const studentsRes = await axios.get(`http://localhost:11129/api/schools/${id}/students`);
+//         const studentsRes = await axios.get(`https://hackathon-backend-w6z7.onrender.com/api/schools/${id}/students`);
 //         setStudentsCount(studentsRes.data.length);
 //       } catch (err) {
 //         console.error('Error loading dashboard data:', err);
@@ -293,7 +293,7 @@
 //   useEffect(() => {
 //     const fetchData = async () => {
 //       try {
-//         const schoolRes = await axios.get(`http://localhost:11129/api/schools/${id}`);
+//         const schoolRes = await axios.get(`https://hackathon-backend-w6z7.onrender.com/api/schools/${id}`);
 //         setSchool(schoolRes.data);
 
 //       } catch (err) {
@@ -304,7 +304,7 @@
 //     fetchData();
 //     const fetchDashboardData = async () => {
 //       try {
-//         const response = await axios.get('http://localhost:11129/api/schools/dashboard', {
+//         const response = await axios.get('https://hackathon-backend-w6z7.onrender.com/api/schools/dashboard', {
 //           headers: { Authorization: `Bearer ${token}` },
 //         });
 //         setDashboardData(response.data);
@@ -531,7 +531,7 @@
 //   useEffect(() => {
 //     const fetchSchoolData = async () => {
 //       try {
-//         const schoolRes = await axios.get(`http://localhost:11129/api/schools/${id}`);
+//         const schoolRes = await axios.get(`https://hackathon-backend-w6z7.onrender.com/api/schools/${id}`);
 //         setSchool(schoolRes.data);
 //       } catch (err) {
 //         console.error('Error loading school data:', err);
@@ -818,10 +818,10 @@ const [showBMC, setShowBMC] = useState(false);
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const schoolRes = await axios.get(`http://localhost:11129/api/schools/${id}`);
+        const schoolRes = await axios.get(`https://hackathon-backend-w6z7.onrender.com/api/schools/${id}`);
         setSchool(schoolRes.data);
 
-        const dashboardRes = await axios.get(`http://localhost:11129/api/admin/summary/${id}`);
+        const dashboardRes = await axios.get(`https://hackathon-backend-w6z7.onrender.com/api/admin/summary/${id}`);
         setDashboardData(dashboardRes.data);
        
 

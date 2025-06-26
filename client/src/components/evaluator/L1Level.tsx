@@ -29,7 +29,7 @@ export default function L1Level({ projects, onStatusChange, username,refreshL2Li
         setIsLoading(true);
         try {
             const token = localStorage.getItem('evaluatorToken');
-            const response = await axios.get('http://localhost:11129/api/evaluator/level-1-summary', {
+            const response = await axios.get('https://hackathon-backend-w6z7.onrender.com/api/evaluator/level-1-summary', {
                 headers: { Authorization: `Bearer ${token}` },
             });
             setSummary(response.data);
@@ -67,7 +67,7 @@ export default function L1Level({ projects, onStatusChange, username,refreshL2Li
                 evaluatedBy: username,
             };
 
-            await axios.post('http://localhost:11129/api/evaluator/evaluate-project', payload);
+            await axios.post('https://hackathon-backend-w6z7.onrender.com/api/evaluator/evaluate-project', payload);
             alert('Project evaluated successfully!');
 
             // Remove project locally to hide it immediately:
@@ -91,7 +91,7 @@ export default function L1Level({ projects, onStatusChange, username,refreshL2Li
         try {
             const token = localStorage.getItem('evaluatorToken');
 
-            await axios.post('http://localhost:11129/api/evaluator/skip-project', {
+            await axios.post('https://hackathon-backend-w6z7.onrender.com/api/evaluator/skip-project', {
                 projectId: project.projectId,
                 evaluatorId: username // or pass evaluator _id if needed
             }, {

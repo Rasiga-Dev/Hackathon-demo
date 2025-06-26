@@ -8,7 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const HackathonPage = () => {
   const handleDownloadTemplate = async () => {
     try {
-      const response = await fetch('http://localhost:11129/api/download/template');
+      const response = await fetch('https://hackathon-backend-w6z7.onrender.com/api/download/template');
       if (!response.ok) throw new Error('Failed to download template');
       
       const blob = await response.blob();

@@ -22,7 +22,7 @@
 
 //   const fetchFinalists = async () => {
 //     try {
-//       const res = await axios.get("http://localhost:11129/api/admin/top-finalists");
+//       const res = await axios.get("https://hackathon-backend-w6z7.onrender.com/api/admin/top-finalists");
 //       setFinalists(res.data);
 //       setLoading(false);
 //     } catch (err) {
@@ -33,7 +33,7 @@
 
 //   const handleAcceptFinalist = async (projectId: string) => {
 //     try {
-//       await axios.post(`http://localhost:11129/api/admin/accept-finalist/${projectId}`);
+//       await axios.post(`https://hackathon-backend-w6z7.onrender.com/api/admin/accept-finalist/${projectId}`);
 //       alert("Marked as Finalist!");
 //     } catch (err) {
 //       console.error(err);
@@ -158,7 +158,7 @@
 
 //     const fetchFinalists = async () => {
 //         try {
-//             const res = await axios.get("http://localhost:11129/api/admin/top-finalists");
+//             const res = await axios.get("https://hackathon-backend-w6z7.onrender.com/api/admin/top-finalists");
 //             setFinalists(res.data);
 //             setLoading(false);
 //         } catch (err) {
@@ -169,7 +169,7 @@
 
 //     const handleAcceptFinalist = async (projectId: string) => {
 //         try {
-//             await axios.post(`http://localhost:11129/api/admin/accept-finalist/${projectId}`);
+//             await axios.post(`https://hackathon-backend-w6z7.onrender.com/api/admin/accept-finalist/${projectId}`);
 //             alert("Marked as Finalist!");
 //             fetchFinalists(); // Refresh after update
 //         } catch (err) {
@@ -311,7 +311,7 @@ const FinalistManagement = () => {
 
     const fetchFinalists = async () => {
         try {
-            const res = await axios.get("http://localhost:11129/api/admin/top-finalists");
+            const res = await axios.get("https://hackathon-backend-w6z7.onrender.com/api/admin/top-finalists");
             setFinalists(res.data);
             setLoading(false);
         } catch (err) {
@@ -322,7 +322,7 @@ const FinalistManagement = () => {
 
     const handleAcceptFinalist = async (projectId: string) => {
         try {
-            await axios.post(`http://localhost:11129/api/admin/accept-finalist/${projectId}`);
+            await axios.post(`https://hackathon-backend-w6z7.onrender.com/api/admin/accept-finalist/${projectId}`);
             alert("Marked as Finalist!");
             fetchFinalists(); // Refresh after update
         } catch (err) {
@@ -333,7 +333,7 @@ const FinalistManagement = () => {
 
     const handleNotify = async (project: Finalist) => {
         try {
-            await axios.post(`http://localhost:11129/api/admin/notify-finalist/${project.projectId}`);
+            await axios.post(`https://hackathon-backend-w6z7.onrender.com/api/admin/notify-finalist/${project.projectId}`);
             alert(`Notification sent to ${project.schoolName} successfully!`);
         } catch (error) {
             console.error("Notification Error:", error);
