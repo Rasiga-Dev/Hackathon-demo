@@ -77,6 +77,11 @@ app.get('/api/download/template', (req, res) => {
   });
 });
 
+app.use(cors({
+  origin: 'https://hackathon-demo-n1v5ohapn-rasiga-rs-projects.vercel.app',
+  credentials: true
+}));
+
 // Start the server
 const PORT = process.env.PORT || 11129;
 app.listen(PORT, () => {
