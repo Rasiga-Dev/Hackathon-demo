@@ -519,6 +519,8 @@ router.get('/dashboard', authenticateToken, async (req, res) => {
       (sub) => sub.averageFilter === 'filtered'
     ) || false;
 
+    
+
     // ✅ Send full submissions array also
     res.status(200).json({
       totalProjects,
@@ -526,6 +528,7 @@ router.get('/dashboard', authenticateToken, async (req, res) => {
       submittedIdeas: totalProjects,
       studentsCount,
       hasFilteredAverage,
+      schoolName:school.School_Name,
       submissions: school.submissions, // ✅ Add this line
       projectId: school.submissions._id, // Include school ID for reference
     });
